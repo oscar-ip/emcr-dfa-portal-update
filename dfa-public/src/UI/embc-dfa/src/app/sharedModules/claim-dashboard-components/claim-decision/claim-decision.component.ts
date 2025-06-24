@@ -62,7 +62,8 @@ export class ClaimDecisionComponent implements OnInit {
     console.log('Opening appeal decision dialog...');
     const dialogRef = this.dialog.open(AppealDecisionDialogComponent, {
       width: '500px',
-      disableClose: true
+      disableClose: true,
+      data: { claimId: this.claimId }
     });
 
     dialogRef.afterClosed().subscribe(result => {
